@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation'
+import Main from './components/Main'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import { createContext, useState } from 'react';
+import "./components/dark.css"
+import DetailPage from './components/DetailPage'
+import Contact from './components/contact/Contact';
+export const ThemeContext = createContext(null)
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <div className='App'>
+        <Navigation/>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/detail/:id' element={<DetailPage/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+
+      </Routes>
+      <Footer/>
+        </div>
+      </BrowserRouter>
+      
+
+
   );
 }
 

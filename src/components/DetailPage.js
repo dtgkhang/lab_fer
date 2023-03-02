@@ -2,8 +2,9 @@ import { useParams } from "react-router-dom";
 import { Films } from "../share/ListOfFilms";
 
 import React from "react";
-import { Descriptions, Row, Col, Image } from "antd";
+import { Descriptions, Row, Col, Image, Button } from "antd";
 import CarouselCard from "./CarouselCard";
+import VideoModal from "./modal/VideoModal";
 
 function DetailPage() {
   const userName = useParams();
@@ -11,6 +12,9 @@ function DetailPage() {
     return obj.id == userName.id;
   });
   //    let cost = film.cost.toLocaleString();
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div className="container detail-page">
       <div className="content">
@@ -31,7 +35,10 @@ function DetailPage() {
               <Descriptions.Item label="Description">
                 {film.data}
               </Descriptions.Item>
+              
             </Descriptions>
+            <Button className="mt-2" onClick={handleOpen} trailer={film.data}>View Trailer</Button>
+            <VideoModal open={open} close={handleClose} trailer={film.trailer} />
           </Col>
         </Row>
       </div>

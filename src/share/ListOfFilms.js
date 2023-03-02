@@ -7,6 +7,7 @@ export const Films = [
         "Nation": "USA",
         "Boxoffice": "$1.489 billion",
         "data":"Phi công siêu đẳng Maverick là một bộ phim chính kịch hành động của Hoa Kỳ được phát hành vào năm 2022. Bộ phim được đạo diễn bởi Joseph Kosinski, biên kịch bởi Ehren Kruger, Eric Warren Singer, Christopher McQuarrie, và cốt truyện được xây dựng bởi Peter Craig và Justin Marks"
+        ,"trailer":"https://www.youtube.com/watch?v=ZR99nOkEolM"
     },
     {
         id: 2,
@@ -15,8 +16,11 @@ export const Films = [
         "Year": "12/2022",
         "Nation": "USA",
         "Boxoffice": "$1.12 million USD",
-        "data":"Women Talking là một bộ phim chính kịch của Mỹ năm 2022 do Sarah Polley viết kịch bản và đạo diễn. Nó dựa trên cuốn tiểu thuyết cùng tên năm 2018 của Miriam Toews và lấy cảm hứng từ các sự kiện trong đời thực xảy ra tại Thuộc địa Manitoba, một cộng đồng Mennonite xa xôi và biệt lập ở Bolivia."    },
-    {
+        "data":"Women Talking là một bộ phim chính kịch của Mỹ năm 2022 do Sarah Polley viết kịch bản và đạo diễn. Nó dựa trên cuốn tiểu thuyết cùng tên năm 2018 của Miriam Toews và lấy cảm hứng từ các sự kiện trong đời thực xảy ra tại Thuộc địa Manitoba, một cộng đồng Mennonite xa xôi và biệt lập ở Bolivia.",
+        "trailer":"https://www.youtube.com/watch?v=pD0mFhMqDCE"    
+    }
+        ,
+        {
         id: 3,
         "Image": "assets/banner3.jpg", 
         "Title": "Cuộc chiến đa vũ trụ",

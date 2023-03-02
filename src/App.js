@@ -8,6 +8,8 @@ import { createContext, useState } from 'react';
 import "./components/dark.css"
 import DetailPage from './components/DetailPage'
 import Contact from './components/contact/Contact';
+import Blog from './components/blog/Blog';
+import About from './components/about/About';
 export const ThemeContext = createContext(null)
 function App() {
 
@@ -18,7 +20,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/detail/:id' element={<DetailPage/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/news'element={<Blog/>}/>
+        <Route path='/about'element={<About/>}/>
 
       </Routes>
       <Footer/>

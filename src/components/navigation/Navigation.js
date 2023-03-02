@@ -34,6 +34,16 @@ function Navigation() {
                 Contact
               </a>
             </li>
+            <li class="nav-item cursor-auto">
+              <a class="nav-link cursor-auto"onClick={()=>navigate("/about")}>
+                About
+              </a>
+            </li>
+            <li class="nav-item cursor-auto">
+              <a class="nav-link cursor-auto"onClick={()=>navigate("/news")}>
+                News
+              </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                   {DarkMode}

@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@material-ui/core/Grid';
 
 export default function FilmPresentation({ films }) {
   const [openModal, setOpenModal] = useState();
@@ -23,11 +24,12 @@ export default function FilmPresentation({ films }) {
 
   return (
     <div className="container mt-5">
-        <div className=' row row-cols-1 row-cols-md-2 row-cols-xl-3 g-5'>
+        <Grid container spacing={3}>
         {films.map((film)=>(
-              <Card className="col" sx={{ maxWidth: 330 ,Height: 750}}>
+          <Grid item xs={12} sm={6} md={4}>
+          <Card sx={{ height: 630 }}>
       <CardMedia
-        sx={{ height: 350 }}
+        sx={{ height: 450 }}
         image={film.Image}
         title={film.Title}
       />
@@ -60,11 +62,15 @@ export default function FilmPresentation({ films }) {
           handleCancel={handleCancel}
         />
             </Card>
+            </Grid>
+
+
+              
 
         
 ))}      
  
-  </div>
+ </Grid>
     </div>
     
       

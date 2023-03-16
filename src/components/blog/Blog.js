@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff"
   },
   hero: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images2.thanhnien.vn/Uploaded/hoangthang/2019_02_28/tuongoscar_giaioscar_anhshutterstock_IWLN.jpg?width=500')`,
     height: "500px",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -67,37 +67,32 @@ function Blog() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <div >
       <AppBar className={classes.appBar} position="static">
-        <Toolbar>
-          <Typography variant="h6" color="primary" >
-            Blog
-          </Typography>
-        </Toolbar>
+
       </AppBar>
       <Box className={classes.hero}>
-        <Box>React Blog</Box>
+        <Box>Oscar News</Box>
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Typography variant="h4" className={classes.blogTitle}>
           Articles
         </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardActionArea>
+          <Grid  item xs={12} sm={6} md={4}>
+            <Card className={classes.card + " card" }>
+              <CardActionArea >
                 <CardMedia
-                  className={classes.media}
-                  image="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  className={classes.media }
+                  image="https://images2.thanhnien.vn/528068263637045248/2023/2/24/will-smith-slap-16772314598721450731601.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    React useContext
+                  Oscar lập đội xử lý khủng hoảng
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  Sau sự kiện diễn viên Will Smith tát Chris Rock ngay trên sân khấu lễ trao giải Oscar năm 2022 khiến khán giả ngỡ ngàng.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -106,10 +101,10 @@ function Blog() {
                   <Avatar src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                   <Box ml={2}>
                     <Typography variant="subtitle2" component="p">
-                      Guy Clemons
+                      ThanhNien
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" component="p">
-                      May 14, 2020
+                      Feb 1, 2023
                     </Typography>
                   </Box>
                 </Box>
@@ -120,20 +115,19 @@ function Blog() {
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
+          <Card className={classes.card + " card" }>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  image="https://static.tuoitre.vn/tto/r/2016/06/30/24718069-1467279435.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    React Router
+                  Hội đồng chấm giải Oscar
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  Ban tổ chức giải Oscar tuyên bố mời gần 700 thành viên mới, chủ yếu là nữ giới và người da màu, vào hội đồng bỏ phiếu giải thưởng điện ảnh danh giá này.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -142,7 +136,7 @@ function Blog() {
                   <Avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" />
                   <Box ml={2}>
                     <Typography variant="subtitle2" component="p">
-                      Guy Clemons
+                     TuoiTre
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" component="p">
                       May 14, 2022
@@ -156,20 +150,20 @@ function Blog() {
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
+          <Card className={classes.card + " card" }>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  image="https://vnn-imgs-a1.vgcloud.vn/cdnmedia.baotintuc.vn/Upload/0gYjdiNY41wQIbPeRYyPvA/files/2022/03/giai-Oscar/tuong-oscar.jpeg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    React useContext
+                  Vì sao tượng vàng Oscar giá 1$
+
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  Tượng vàng Oscar là giải thưởng danh giá nhất ở Hollywood, nhưng đây chính là lý do tại sao nó chỉ trị giá 1 đô-la.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -178,7 +172,7 @@ function Blog() {
                   <Avatar src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                   <Box ml={2}>
                     <Typography variant="subtitle2" component="p">
-                      Guy Clemons
+                      vietNamNet
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" component="p">
                       May 14, 2022
@@ -192,20 +186,18 @@ function Blog() {
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
+          <Card className={classes.card + " card" }>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.pexels.com/photos/325111/pexels-photo-325111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  image="https://vtv1.mediacdn.vn/thumb_w/650/2022/9/19/phim-de-cu-oscars-1663559946200300471142-crop-16635599627391305590187.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    React useContext
-                  </Typography>
+                  Lượng người xem sụt giảm                  </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  các thành viên của Viện Hàn lâm đang họp bàn để nhằm tạo nên sự khác biệt và sức sống mới cho lễ trao giải danh giá Oscar 2023
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -214,7 +206,7 @@ function Blog() {
                   <Avatar src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" />
                   <Box ml={2}>
                     <Typography variant="subtitle2" component="p">
-                      Guy Clemons
+                      VTV
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" component="p">
                       May 14, 2020

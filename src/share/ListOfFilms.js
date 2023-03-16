@@ -27,6 +27,8 @@ export const Films = [
         "Year": "3/2022",
         "Nation": "USA","Boxoffice": "$106,5  million",
         "data":"Cuộc chiến đa vũ trụ là một bộ phim hài chính kịch xen lẫn với hành động - võ thuật của Hoa Kỳ năm 2022 do Daniel Kwan và Daniel Scheinert viết kịch bản, đạo diễn và đồng sản xuất với anh em nhà Russo"
+        ,"trailer":"https://www.youtube.com/embed/1Y8KIV9K1cg"   
+
     },
     {
         id: 4,
@@ -35,6 +37,8 @@ export const Films = [
         "Year": "10/2022",
         "Nation": "USA","Boxoffice": "$37.9 million",
         "data":"The Banshees of Inisherin là một bộ phim bi kịch đen năm 2022 do Martin McDonagh đạo diễn, viết kịch bản và đồng sản xuất."
+        ,"trailer":"https://www.youtube.com/embed/uRu3zLOJN2c"   
+
     },
     {
         id: 5,
@@ -43,6 +47,8 @@ export const Films = [
         "Year": "2022",
         "Nation": "USA","Boxoffice": "$1.489 billion",
         "data":"Đáy thượng lưu là một bộ phim điện ảnh thuộc thể loại hài đen – châm biếm – chính kịch công chiếu năm 2022 do Ruben Östlund viết kịch bản kiêm đạo diễn trong tác phẩm đầu tay bằng ngôn ngữ tiếng Anh của ông. "
+        ,"trailer":"https://www.youtube.com/embed/oynJnBhWbXU"   
+
     },
     {
         id: 6,
@@ -51,6 +57,8 @@ export const Films = [
         "Year": "2022",
         "Nation": "USA","Boxoffice": "$1.489 billion",
         "data":"The Fabelmans: Tuổi trẻ huy hoàng là một bộ phim điện ảnh thuộc thể loại tuổi mới lớn – chính kịch của Mỹ công chiếu năm 2022 do Steven Spielberg làm đạo diễn, hợp tác viết kịch bản và đồng sản xuất với Tony Kushner."
+        ,"trailer":"https://www.youtube.com/embed/D1G2iLSzOe8"
+
     },
     {
         id: 7,
@@ -59,6 +67,8 @@ export const Films = [
         "Year": "2022",
         "Nation": "USA","Boxoffice": "$1.489 billion",
         "data":"Phía Tây không có gì lạ là một bộ phim điện ảnh thuộc thể loại sử thi – chiến tranh – chính kịch công chiếu năm 2022 do Đức và Mỹ sản xuất, phóng tác từ cuốn tiểu thuyết cùng tên của nhà văn Erich Maria Remarque"
+        ,"trailer":"https://www.youtube.com/embed/1Y8KIV9K1cg"   
+
     },
     {
         id: 8,
@@ -67,6 +77,8 @@ export const Films = [
         "Year": "2022",
         "Nation": "USA","Boxoffice": "$1.489 billion",
         "data":"Avatar: Dòng chảy của nước là một bộ phim khoa học viễn tưởng sử thi của Mỹ năm 2022 do James Cameron đạo diễn, người đồng viết kịch bản với Rick Jaffa và Amanda Silver từ một câu chuyện mà bộ ba viết cùng Josh Friedman và Shane Salerno. "
+        ,"trailer":"https://www.youtube.com/embed/1Y8KIV9K1cg"   
+
     },
     {
         id: 9,
@@ -75,5 +87,7 @@ export const Films = [
         "Year": "6/2022",
         "Nation": "USA","Boxoffice": "$1.489 billion",
         "data":"Elvis Aaron Presley, hay còn được gọi đơn giản là Elvis, là nam ca sĩ, diễn viên người Mỹ. Ông được coi là một trong những biểu tượng đại chúng quan trọng nhất của thế kỷ 20 và thường được mệnh danh là Ông hoàng nhạc Rock and Roll"
+        ,"trailer":"https://www.youtube.com/embed/1Y8KIV9K1cg"   
+
     }
 ];

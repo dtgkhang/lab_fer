@@ -18,6 +18,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { Link } from "react-router-dom";
 function createData(name, content) {
   return {
     name,content
@@ -89,8 +90,38 @@ const About = () => {
   ];
 
   return (
-      
-          <TableContainer component={Paper} className="mt-5 w-25 justify-content-around">
+    <section id="about">
+      <h5>Get To Know</h5>
+      <h2>About Me</h2>
+      <div className="container about__container">
+        <div className="about__me">
+          <div className="about__me-image">
+            <img src="https://znews-photo.zingcdn.me/w660/Uploaded/pqmcbzwv/2023_03_02/PGMOE6342ZNWHDLHVV2457MHH4.jpg" alt="About Image" />
+          </div>
+        </div>
+        <div className="about__content">
+          {/* <div className="about__cards">
+            <article className="about__card">
+              <FaAward className="about__icon" />
+              <h5>Experience</h5>
+              <small>3rd student</small>
+            </article>
+            <article className="about__card">
+              <TbSchool className="about__icon" />
+              <h5>GPA</h5>
+              <small>3.3+ AVG</small>
+            </article>
+            <article className="about__card">
+              <GiOpenFolder className="about__icon" />
+              <h5>Project</h5>
+              <small>10+ completed</small>
+            </article>
+          </div> */}
+          <p>
+          Hi, I'm Khang, and I'm in my third year of studies towards a bachelor's in Software Engineering at FPT University.
+          Courteous and enthusiastic, I am interested in Web programming and Blockchain.
+          </p>
+          <TableContainer  className="about__content coll">
       <Table aria-label="collapsible table">
         <TableHead>
           {/* <TableRow>
@@ -104,11 +135,14 @@ const About = () => {
         </TableBody>
       </Table>
     </TableContainer>
- 
+         <a onClick={()=>{Link("/contact")}} className="btn btn-primary mt-2">Let's Talk</a> 
+        </div>
+
 
   
 
-      
+      </div>
+    </section>
   );
 };
 

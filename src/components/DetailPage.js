@@ -38,7 +38,7 @@ function DetailPage() {
               
             </Descriptions>
             <Button className="mt-2" onClick={handleOpen} trailer={film.data}>View Trailer</Button>
-            <VideoModal open={open} close={handleClose} trailer={film.trailer} />
+            <VideoModal open={open} close={handleClose} trailer={film.trailer}  title={film.Title}/>
           </Col>
         </Row>
       </div>

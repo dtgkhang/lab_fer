@@ -10,6 +10,7 @@ import { Input } from '@mui/material';
 import { FormHelperText } from '@mui/material';
 import { TextareaAutosize } from '@mui/base';
 import Button from '@mui/material/Button';
+import { message } from 'antd'
 
 // import emailjs from 'emailjs-com';
 
@@ -18,7 +19,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
+    message.success("Send Success")
     // emailjs.sendForm('service_q99gr6a', 'template_fruojvo', form.current, 'XkMkLapwlOoeVrPO5')
     //   .then((result) => {
     //       console.log(result.text);

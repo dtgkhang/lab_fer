@@ -10,6 +10,9 @@ import DetailPage from './components/DetailPage'
 import Contact from './components/contact/Contact';
 import Blog from './components/blog/Blog';
 import About from './components/about/About';
+import Dashboard from './components/dashboard/Dashboard';
+import Protected from './components/Protected';
+import Login from './components/Login';
 export const ThemeContext = createContext(null)
 function App() {
 
@@ -21,9 +24,11 @@ function App() {
         <Route path='/' element={<Main/>}/>
         <Route path='/detail/:id' element={<DetailPage/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/login' element={<Login/>}/>
+
         <Route path='/news'element={<Blog/>}/>
         <Route path='/about'element={<About/>}/>
-
+        <Route path='/dashboard' element={<Protected><Dashboard/></Protected>}></Route>        
       </Routes>
       <Footer/>
         </div>

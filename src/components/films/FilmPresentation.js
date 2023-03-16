@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import DetailModal from "../DetailModal";
 import './films.css'
@@ -9,23 +9,47 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@material-ui/core/Grid';
+import axios from "axios";
 
 export default function FilmPresentation({ films }) {
   const [openModal, setOpenModal] = useState();
   const navigate = useNavigate();
+  const [movies,setMovies] = useState([]);
+  const getMoives = async () => {
+    try {
+        const response = await axios.get("https://64130b93b1ea74430320d843.mockapi.io/api/oscar/movie")
+        console.log(response);
 
-  
+        if (response.data) {
+          console.log(response.data);
+          setMovies(response.data)
+        } else {
+            // message.error(response.data.message);
+
+        }
+    } catch (err) {
+        // message.error(err.message);
+
+    }
+};
   // const handleOk = (openModal) => {
   //   navigate(`/detail/${openModal}`)
   //   setOpenModal(undefined)  };
 
   const handleCancel = () => {
     setOpenModal(undefined)  };
+    
+    
+    
+  useEffect(() => {
 
+      getMoives();
+
+  },[]);
   return (
     <div className="container mt-5">
         <Grid container spacing={3}>
-        {films.map((film)=>(
+        {movies.map((film)=>(
           <Grid item xs={12} sm={6} md={4}>
           <Card sx={{ height: 630 }}>
       <CardMedia
@@ -56,11 +80,11 @@ export default function FilmPresentation({ films }) {
              
             </div>
         </div> */}
-                  <DetailModal img={film.Image} data={film.data}
+                  {/* <DetailModal img={film.Image} data={film.data}
           isModalOpen={openModal===film.id}
           handleOk={()=>navigate(`/detail/${film.id}`)}
           handleCancel={handleCancel}
-        />
+        /> */}
             </Card>
             </Grid>
 

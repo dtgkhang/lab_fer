@@ -45,7 +45,7 @@ export default function VideoModal({open,close,trailer,title}) {
         <Fade in={open}>
           <Box sx={{ width: { xs: '340px', lg: '400px', xl: '600px' },...style }} >
             <Typography id="transition-modal-title" variant="h6" component="h2">
-               trailer 
+               {title} - trailer 
             </Typography>
             <iframe style={{width:"100%"}} height="315" src={trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </Box>

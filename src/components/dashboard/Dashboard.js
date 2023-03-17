@@ -7,7 +7,7 @@ import {
   Popconfirm,
   Row,
   Col,
-  message,
+  message,Button
 } from "antd";
 import { useFormik } from "formik";
 import {  useEffect, useState } from "react";
@@ -19,7 +19,7 @@ import {
   FormControlLabel,
   Switch,
   Typography,
-  Button,
+
 } from "@mui/material";
 import "./form.css";
 import Link from "@mui/material/Link";
@@ -32,6 +32,7 @@ import Avatar from "@mui/material/Avatar";
 import CssBaseline from "@mui/material/CssBaseline";
 import axios from "axios";
 import UpdateModal from "../UpdateModal";
+import React from "react";
 
 const theme = createTheme();
 export default function Dashboard() {
@@ -170,8 +171,8 @@ const YearVal =/^(19|20)\d{2}$/
   // const userList = useSelector((state) => state.user.user);
   const [newPhone, setNewPhone] = useState(0);
 
-  const [searchedText, setSearchedText] = useState([]);
-  const [filteredInfo, setFilteredInfo] = useState({});
+  const  [searchedText, setSearchedText] = useState([]);
+  const [filteredInfo, setFilteredInfo]  = useState({});
   const handleChange = (pagination, filters, sorter, search) => {
     console.log("Various parameters", pagination, filters, sorter, search);
     setFilteredInfo(filters);
@@ -182,13 +183,13 @@ const YearVal =/^(19|20)\d{2}$/
     currency: 'USD',
   
   });
-
+ 
   const columns = [
     {
       title: "id",
       dataIndex: "id",
       key: "id",
-      sorter: (a, b) => a.id > b.id,
+      sorter: (a, b) => a.id - b.id,
       // sortOrder: sortedInfo.columnKey === 'id' ? sortedInfo.order : null,
       ellipsis: true,
     },
@@ -197,7 +198,7 @@ const YearVal =/^(19|20)\d{2}$/
       dataIndex: "Title",
       key: "Title",
       filteredValue: [searchedText],
-      onFilter: (value, record) => record.Title.includes(value),
+      // onFilter: (value:string, record) => record.Title.includes(value),
 
 
       // sortOrder: sortedInfo.columnKey === 'name' ? sortedInfo.order : null,
@@ -403,10 +404,8 @@ const YearVal =/^(19|20)\d{2}$/
                   )}
                                     <Grid item xs={12}>
                                     <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{ mt: 3, mb: 2 }}
+                    // type="submit"
+                    // fullWidth
                   >
                     Send
                   </Button>
@@ -440,7 +439,7 @@ const YearVal =/^(19|20)\d{2}$/
             expandedRowRender: (record) => (
               <Row>
                 <Col lg={8} xs={10} sm={12}>
-{record.trailer&&             <iframe style={{width:"100%"}} height="315" src={record.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{record.trailer&&             <iframe style={{width:"100%"}} height="315" src={record.trailer} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
 }
                   {/* <img src={record.Image} width={200} /> */}
                 </Col>
@@ -454,10 +453,9 @@ const YearVal =/^(19|20)\d{2}$/
         />
       </Col>
       <UpdateModal     isModalOpen={isModalOpen}
-          handleOk={handleOk}
-          handleCancel={handleCancel} record={modaldata} 
-          setRefresh={setRefreshKey}
-
+      handleOk={handleOk}
+      handleCancel={handleCancel} record={modaldata}
+      setRefresh={setRefreshKey} setIsModalOpen={undefined}
           />
     </Row>
   );

@@ -82,7 +82,9 @@ import Tooltip from '@mui/material/Tooltip';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../AuthContext';
-const pages = ['Home', 'About', 'News'];
+import { useNavigate } from 'react-router-dom/dist';
+import Login from '../Login';
+const pages = [{name:'Home',url:"/"},{name:'About us',url:"/about"},{name:'Contact',url:"/contact"}];
 function Navigation() {
   const {user, logOut} = UserAuth();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -106,6 +108,10 @@ const handleSignOut = async ()=>{
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -125,7 +131,7 @@ const handleSignOut = async ()=>{
               textDecoration: 'none',
             }}
           >
-            LOGO
+            OSCAR
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -157,8 +163,9 @@ const handleSignOut = async ()=>{
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={()=>navigate(page.url)}
+                >
+                  <Typography textAlign="center" oncl>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -180,16 +187,16 @@ const handleSignOut = async ()=>{
               textDecoration: 'none',
             }}
           >
-            LOGO
+            OSCAR
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.name}
+                onClick={()=>navigate(page.url)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -199,6 +206,10 @@ const handleSignOut = async ()=>{
                 <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt={user.email} src={user.photoURL} />
+                <Typography textAlign="center">
+
+                            Welcome, {user.displayName}
+          </Typography>
               </IconButton>
             </Tooltip>
             <Menu
@@ -237,6 +248,7 @@ const handleSignOut = async ()=>{
           </Box>
         </Toolbar>
       </Container>
+   
     </AppBar>
   );
 }

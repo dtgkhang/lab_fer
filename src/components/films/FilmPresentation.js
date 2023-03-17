@@ -80,11 +80,11 @@ export default function FilmPresentation({ films }) {
              
             </div>
         </div> */}
-                  {/* <DetailModal img={film.Image} data={film.data}
+                  <DetailModal img={film.Image} data={film.data}
           isModalOpen={openModal===film.id}
           handleOk={()=>navigate(`/detail/${film.id}`)}
           handleCancel={handleCancel}
-        /> */}
+        />
             </Card>
             </Grid>
 

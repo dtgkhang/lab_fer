@@ -53,21 +53,21 @@ const Contact = () => {
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-        <FormControl >
+        <FormControl required>
       <InputLabel htmlFor="my-input">Email address</InputLabel>
       <Input id="my-input" aria-describedby="my-helper-text" />
       <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
       </FormControl>
-      <FormControl >
+      <FormControl  required>
       <InputLabel htmlFor="my-input">Your name</InputLabel>
       <Input name="name" id="my-input" aria-describedby="my-helper-text" />
       </FormControl>
-              <FormControl >
+              <FormControl required >
       <InputLabel htmlFor="my-input">Your Phone</InputLabel>
       <Input name="phone" id="my-input" aria-describedby="my-helper-text" />
       <FormHelperText id="my-helper-text">We'll never share your phone.</FormHelperText>
       <TextareaAutosize name="message"></TextareaAutosize>
-      </FormControl>
+      </FormControl >
           {/* <input type="text" name='name' placeholder='Your Full Name' required/>
           <input type="email" name="email" placeholder="Your Email" required/>
           <textarea name="message" cols="30" rows="10"></textarea> */}

@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <Carousel style={{margin:"90px 0 0 0"}}  activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item >
         <img
           className="d-block w-100" style={{height:"500px"}}
